@@ -8,12 +8,13 @@ taille = taille_cm / 100  # Conversion en mètres
 
 if st.button("Calculer l'IMC"):
     if taille > 0:
-        imc = poids / (taille  2)
+        imc = poids / (taille **2)
         st.success(f"Votre IMC est : {imc:.2f}")
 
         if imc < 18.5:
             categorie = "🔴 Maigreur"
         elif imc < 25:
+        
             categorie = "🟢 Corpulence normale"
         elif imc < 30:
             categorie = "🟡 Surpoids"
